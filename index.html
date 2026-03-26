@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Perfis de Usuários</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Perfis da Comunidade</h1>
+        <button id="theme-toggle" class="btn btn-theme">Alternar Modo Claro/Escuro</button>
+    </header>
+
+    <main class="cards-container">
+        <!-- Card 1 -->
+        <article class="card" data-followers="1450" data-following="300">
+            <div class="card-header">
+                <img src="https://ui-avatars.com/api/?name=Seto+Kaiba&background=random" alt="Avatar de Seto Kaiba" class="avatar">
+                <button class="btn btn-avatar" onclick="swapAvatar(event, this)">Trocar Avatar</button>
+            </div>
+            
+            <div class="card-body">
+                <h2 class="name">Seto Kaiba</h2>
+                <h3 class="role">Cara que perde no jogo que ele mesmo banca</h3>
+                <p class="bio">Saco de Porrada do Yugi</p>
+                
+                <div class="skills">
+                    <h4>Caracteristica/Feitos</h4>
+                    <ul>
+                        <li>Dragão branco de olhos azuis</li>
+                        <li>Mais rico que o elon musk</li>
+                        <li>Irmão do mokuba</li>
+                    </ul>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-value followers-count">1450</span>
+                        <span class="stat-label">Seguidores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value following-count">300</span>
+                        <span class="stat-label">Seguindo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-actions">
+                <button class="btn btn-color" onclick="changeCardColor(event, this)"> Mudar Cor</button>
+                <button class="btn btn-follow" onclick="toggleFollow(event, this)">Seguir</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" data-followers="850" data-following="210">
+            <div class="card-header">
+                <img src="https://ui-avatars.com/api/?name=Yugi+Muto&background=random" alt="Avatar de Yugi Muto" class="avatar">
+                <button class="btn btn-avatar" onclick="swapAvatar(event, this)"> Trocar Avatar</button>
+            </div>
+            
+            <div class="card-body">
+                <h2 class="name">Yugi Muto</h2>
+                <h3 class="role">Rei dos Jogos</h3>
+                <p class="bio">É o protagonista</p>
+                
+                <div class="skills">
+                    <h4>Caracteristica/Feitos</h4>
+                    <ul>
+                        <li>Deck de mago negro</li>
+                        <li>Cara que tirou o Exodia</li>
+                        <li>Ladrão</li>
+                    </ul>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-value followers-count">850</span>
+                        <span class="stat-label">Seguidores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value following-count">210</span>
+                        <span class="stat-label">Seguindo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-actions">
+                <button class="btn btn-color" onclick="changeCardColor(event, this)">Mudar Cor</button>
+                <button class="btn btn-follow" onclick="toggleFollow(event, this)">Seguir</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" data-followers="3020" data-following="15">
+            <div class="card-header">
+                <img src="https://ui-avatars.com/api/?name=Joey+Wheeler&background=random" alt="Avatar de Joey Wheeler" class="avatar">
+                <button class="btn btn-avatar" onclick="swapAvatar(event, this)"> Trocar Avatar</button>
+            </div>
+            
+            <div class="card-body">
+                <h2 class="name">Joey Wheeler</h2>
+                <h3 class="role">Famoso tudo ou nada</h3>
+                <p class="bio">É Sortudo.</p>
+                
+                <div class="skills">
+                    <h4>Caracteristica/Feitos</h4>
+                    <ul>
+                        <li>Sorte Extrema</li>
+                        <li>Ele tem sorte</li>
+                        <li>Bastante sorte mesmo</li>
+                    </ul>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-value followers-count">3020</span>
+                        <span class="stat-label">Seguidores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value following-count">15</span>
+                        <span class="stat-label">Seguindo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-actions">
+                <button class="btn btn-color" onclick="changeCardColor(event, this)"> Mudar Cor</button>
+                <button class="btn btn-follow" onclick="toggleFollow(event, this)">Seguir</button>
+            </div>
+        </article>
+    </main>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
