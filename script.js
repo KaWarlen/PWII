@@ -1,4 +1,4 @@
-﻿// 1. Modo Claro / Escuro
+// 1. Modo Claro / Escuro
 const themeToggleBtn = document.getElementById('theme-toggle');
 themeToggleBtn.addEventListener('click', () => {
     const currentTheme = document.body.getAttribute('data-theme');
@@ -17,7 +17,7 @@ function changeCardColor(event, btn) {
     const card = btn.closest('.card');
     let currentColorIndex = parseInt(card.getAttribute('data-color-index') || '0');
     
-    // Altera entre 0 e 1 (dois padrões de cor de fundo)
+    // Altera entre 0 e 1
     currentColorIndex = (currentColorIndex + 1) % 2;
     card.setAttribute('data-color-index', currentColorIndex);
     
@@ -102,6 +102,18 @@ cards.forEach(card => {
             closeActiveCard(); // fecha outros se abertos
             this.classList.add('active');
             overlay.classList.add('active');
+            document.querySelector('.cards-container').classList.add('has-active');
+
+            // Injeta botão X de fechar
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'card-close-btn';
+            closeBtn.innerHTML = '&times;';
+            closeBtn.title = 'Fechar';
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeActiveCard();
+            });
+            this.appendChild(closeBtn);
         }
     });
 });
@@ -111,7 +123,12 @@ overlay.addEventListener('click', closeActiveCard);
 function closeActiveCard() {
     const activeCard = document.querySelector('.card.active');
     if (activeCard) {
+        // Remove botão X se existir
+        const closeBtn = activeCard.querySelector('.card-close-btn');
+        if (closeBtn) closeBtn.remove();
+
         activeCard.classList.remove('active');
         overlay.classList.remove('active');
+        document.querySelector('.cards-container').classList.remove('has-active');
     }
 }
