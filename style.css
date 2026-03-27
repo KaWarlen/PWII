@@ -389,6 +389,14 @@ body>* {
 .card[data-color-index="0"] .skills h4 {
     color: var(--text-palette-1);
 }
+.card[data-color-index="0"] .avatar { border-color: var(--avatar-border-1); }
+.card[data-color-index="0"] .role { color: var(--role-palette-1); }
+.card[data-color-index="0"] .stat-value { color: var(--stat-value-1); }
+.card[data-color-index="0"] .stat-label { color: var(--stat-label-1); }
+.card[data-color-index="0"] .bio { color: var(--bio-palette-1); }
+.card[data-color-index="0"] .btn-color { background-color: var(--btn-color-palette-1); }
+.card[data-color-index="0"] .btn-follow:not(.following) { background-color: var(--btn-follow-palette-1); }
+.card[data-color-index="0"] .btn-follow.following { background-color: var(--btn-following-palette-1); }
 
 .card[data-color-index="1"] {
     background-color: var(--card-palette-2);
