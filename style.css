@@ -2,14 +2,14 @@
     --bg-color: #e6e3db;
     --text-color: #333;
     --card-bg: rgba(255, 255, 255, 0.45);
-    --primary-color: #6c7ea1;
+    --primary-color: #a16c6c;
     --secondary-color: #365e9d;
-    --success-color: #28a745;
+    /* --success-color: #28a745; */
     --card-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
     --transition-speed: 0.3s;
 
     /* Cores das paletas de cards no modo claro */
-    --card-palette-1: rgba(240, 248, 255, 0.45);
+    --card-palette-1: rgba(205, 230, 252, 0.45);
     --card-palette-2: var(--card-bg);
 
     --text-palette-1: #1a3a6e;
@@ -21,8 +21,8 @@
     --stat-value-1: #0d47a1;
     --stat-value-2: var(--text-color);
 
-    --stat-label-1: #4299e1;
-    --stat-label-2: var(--secondary-color);
+    --stat-label-1: #2b6595;
+    --stat-label-2: var(--secondary-color); 
 
     --bio-palette-1: #1a3a6e;
     --bio-palette-2: var(--text-color);
