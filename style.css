@@ -44,8 +44,8 @@
     --bg-color: #121212;
     --text-color: #f4f4f9;
     --card-bg: rgba(30, 30, 30, 0.5);
-    --primary-color: #3b82f6;
-    --secondary-color: #4b5563;
+    --primary-color: #c6a940;
+    --secondary-color: #a08830;
     --success-color: #10b981;
     --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
@@ -53,32 +53,32 @@
     --card-palette-1: rgba(15, 10, 2, 0.65);
     --card-palette-2: var(--card-bg);
 
-    --text-palette-1: #c6a940;
-    --text-palette-2: var(--text-color);
+    --text-palette-1: var(--text-color);
+    --text-palette-2: #d4bc6a;
 
-    --role-palette-1: #d4bc6a;
-    --role-palette-2: var(--primary-color);
+    --role-palette-1: var(--primary-color);
+    --role-palette-2: #c6a940;
 
-    --stat-value-1: #c6a940;
-    --stat-value-2: var(--text-color);
+    --stat-value-1: var(--text-color);
+    --stat-value-2: #d4bc6a;
 
-    --stat-label-1: #a08830;
-    --stat-label-2: var(--secondary-color);
+    --stat-label-1: var(--secondary-color);
+    --stat-label-2: #b89a35;
 
-    --bio-palette-1: #dfc87a;
-    --bio-palette-2: var(--text-color);
+    --bio-palette-1: var(--text-color);
+    --bio-palette-2: #c6a940;
 
-    --btn-color-palette-1: #c6a940;
-    --btn-color-palette-2: #17a2b8;
+    --btn-color-palette-1: var(--secondary-color);
+    --btn-color-palette-2: #b89a35;
 
-    --btn-follow-palette-1: #8a6e20;
-    --btn-follow-palette-2: var(--secondary-color);
+    --btn-follow-palette-1: var(--primary-color);
+    --btn-follow-palette-2: #a08830;
 
-    --btn-following-palette-1: #6b5518;
-    --btn-following-palette-2: var(--primary-color);
+    --btn-following-palette-1: var(--secondary-color);
+    --btn-following-palette-2: #8a6e20;
 
-    --avatar-border-1: #c6a940;
-    --avatar-border-2: var(--primary-color);
+    --avatar-border-1: var(--primary-color);
+    --avatar-border-2: #d4bc6a;
 
 
 }
@@ -364,6 +364,14 @@ body>* {
 
 .btn-color:hover {
     background-color: #138496;
+}
+
+[data-theme="dark"] .btn-color {
+    background-color: #c6a940;
+}
+
+[data-theme="dark"] .btn-color:hover {
+    background-color: #a08830;
 }
 
 .btn-follow {
