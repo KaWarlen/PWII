@@ -17,8 +17,8 @@ function changeCardColor(event, btn) {
     const card = btn.closest('.card');
     let currentColorIndex = parseInt(card.getAttribute('data-color-index') || '0');
     
-    // Altera entre 0, 1, 2 e 3
-    currentColorIndex = (currentColorIndex + 1) % 4;
+    // Altera entre 0 e 1 (dois padrões de cor de fundo)
+    currentColorIndex = (currentColorIndex + 1) % 2;
     card.setAttribute('data-color-index', currentColorIndex);
     
     // Removemos os estilos inline para que o CSS faça o trabalho de colorir

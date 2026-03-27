@@ -8,56 +8,80 @@
     --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --transition-speed: 0.3s;
 
-    /* Cores das paletas de cards no modo claro */
+    /* Cores das paletas de cards (2 padrões: padrão e vermelho) */
     --card-palette-1: var(--card-bg);
-    --card-palette-2: #3a3737;
-    --card-palette-3: #3a3737;
-    --card-palette-4: #e3f2fd;
-    
+    --card-palette-2: #ffebee; /* segundo padrão claro (vermelho claro) */
+
     --text-palette-1: var(--text-color);
-    --text-palette-2: #fdfdfd;
-    --text-palette-3: #ffffff;
-    --text-palette-4: #0d47a1;
+    --text-palette-2: #b71c1c;
 
     --role-palette-1: var(--primary-color);
-    --role-palette-2: #eb6f6f;
-    --role-palette-3: #e2d62f;
-    --role-palette-4: #1565c0;
+    --role-palette-2: #c62828;
 
     --stat-value-1: var(--text-color);
-    --stat-value-2: #fffdfd;
-    --stat-value-3: #e2d62f;
-    --stat-value-4: #083b87;
+    --stat-value-2: #b71c1c;
 
     --stat-label-1: var(--secondary-color);
-    --stat-label-2: #ffffff;
-    --stat-label-3: #e2d62f;
-    --stat-label-4: #1976d2;
+    --stat-label-2: #c62828;
 
     --bio-palette-1: var(--text-color);
-    --bio-palette-2: #ffffff;
-    --bio-palette-3: #e2d62f;
-    --bio-palette-4: #083b87;
+    --bio-palette-2: #b71c1c;
 
     --btn-color-palette-1: #17a2b8;
     --btn-color-palette-2: #c62828;
-    --btn-color-palette-3: #868241;
-    --btn-color-palette-4: #1565c0;
 
     --btn-follow-palette-1: var(--secondary-color);
-    --btn-follow-palette-2: #c26363;
-    --btn-follow-palette-3: #c4b706;
-    --btn-follow-palette-4: #083b87;
+    --btn-follow-palette-2: #e57373;
 
     --btn-following-palette-1: var(--primary-color);
-    --btn-following-palette-2: #8f5b5b;
-    --btn-following-palette-3: #827717;
-    --btn-following-palette-4: #1a237e;
+    --btn-following-palette-2: #d32f2f;
 
     --avatar-border-1: var(--primary-color);
-    --avatar-border-2: #e03955;
-    --avatar-border-3: #e2d62f;
-    --avatar-border-4: #4ca3dc;
+    --avatar-border-2: #d32f2f;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f4f4f9;
+    --card-bg: #1e1e1e;
+    --primary-color: #3b82f6;
+    --secondary-color: #4b5563;
+    --success-color: #10b981;
+    --card-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+
+    /* Cores das paletas de cards no modo escuro */
+    --card-palette-1: var(--card-bg);
+    --card-palette-2: #3a1212; /* vermelho escuro
+*/
+
+    --text-palette-1: var(--text-color);
+    --text-palette-2: #ffcdd2;
+
+    --role-palette-1: var(--primary-color);
+    --role-palette-2: #ff8a80;
+
+    --stat-value-1: var(--text-color);
+    --stat-value-2: #ffebee;
+
+    --stat-label-1: var(--secondary-color);
+    --stat-label-2: #ef9a9a;
+
+    --bio-palette-1: var(--text-color);
+    --bio-palette-2: #ffebee;
+
+    --btn-color-palette-1: #17a2b8;
+    --btn-color-palette-2: #ff5252;
+
+    --btn-follow-palette-1: var(--secondary-color);
+    --btn-follow-palette-2: #ff8a80;
+
+    --btn-following-palette-1: var(--primary-color);
+    --btn-following-palette-2: #8d6e63;
+
+    --avatar-border-1: var(--primary-color);
+    --avatar-border-2: #ff8a9f;
+
+    
 }
 
 [data-theme="dark"] {
@@ -117,8 +141,6 @@
 
     --avatar-border-1: var(--primary-color);
     --avatar-border-2: #ff8a9f;
-    --avatar-border-3: #d195ec;
-    --avatar-border-4: #8cc3e7; 
 
     
 }
@@ -283,13 +305,23 @@ body {
 
 .btn-follow { background-color: var(--secondary-color); flex: 1; }
 .btn-follow.following { background-color: var(--primary-color); }
-.btn-follow:hover { opacity: 0.9; }/* Configura��o de paletas de cor para o Card */
+.btn-follow:hover { opacity: 0.9; }
+
+/* Configuração de paletas de cor para o Card (2 padrões) */
 .card[data-color-index="0"] {
     background-color: var(--card-palette-1);
 }
 .card[data-color-index="0"] .name, .card[data-color-index="0"] .role, .card[data-color-index="0"] .skills h4 {
     color: var(--text-palette-1);
 }
+.card[data-color-index="0"] .avatar { border-color: var(--avatar-border-1); }
+.card[data-color-index="0"] .role { color: var(--role-palette-1); }
+.card[data-color-index="0"] .stat-value { color: var(--stat-value-1); }
+.card[data-color-index="0"] .stat-label { color: var(--stat-label-1); }
+.card[data-color-index="0"] .bio { color: var(--bio-palette-1); }
+.card[data-color-index="0"] .btn-color { background-color: var(--btn-color-palette-1); }
+.card[data-color-index="0"] .btn-follow:not(.following) { background-color: var(--btn-follow-palette-1); }
+.card[data-color-index="0"] .btn-follow.following { background-color: var(--btn-following-palette-1); }
 
 .card[data-color-index="1"] {
     background-color: var(--card-palette-2);
@@ -297,51 +329,11 @@ body {
 .card[data-color-index="1"] .name, .card[data-color-index="1"] .role, .card[data-color-index="1"] .skills h4 {
     color: var(--text-palette-2);
 }
-
-.card[data-color-index="2"] {
-    background-color: var(--card-palette-3);
-}
-.card[data-color-index="2"] .name, .card[data-color-index="2"] .role, .card[data-color-index="2"] .skills h4 {
-    color: var(--text-palette-3);
-}
-
-.card[data-color-index="3"] {
-    background-color: var(--card-palette-4);
-}
-.card[data-color-index="3"] .name, .card[data-color-index="3"] .role, .card[data-color-index="3"] .skills h4 {
-    color: var(--text-palette-4);
-}
-.card[data-color-index="0"] .avatar { border-color: var(--avatar-border-1); }
 .card[data-color-index="1"] .avatar { border-color: var(--avatar-border-2); }
-.card[data-color-index="2"] .avatar { border-color: var(--avatar-border-3); }
-.card[data-color-index="3"] .avatar { border-color: var(--avatar-border-4); }
-.card[data-color-index="0"] .role { color: var(--role-palette-1); }
 .card[data-color-index="1"] .role { color: var(--role-palette-2); }
-.card[data-color-index="2"] .role { color: var(--role-palette-3); }
-.card[data-color-index="3"] .role { color: var(--role-palette-4); }
-.card[data-color-index="0"] .stat-value { color: var(--stat-value-1); }
 .card[data-color-index="1"] .stat-value { color: var(--stat-value-2); }
-.card[data-color-index="2"] .stat-value { color: var(--stat-value-3); }
-.card[data-color-index="3"] .stat-value { color: var(--stat-value-4); }
-
-.card[data-color-index="0"] .stat-label { color: var(--stat-label-1); }
 .card[data-color-index="1"] .stat-label { color: var(--stat-label-2); }
-.card[data-color-index="2"] .stat-label { color: var(--stat-label-3); }
-.card[data-color-index="3"] .stat-label { color: var(--stat-label-4); }
-.card[data-color-index="0"] .bio { color: var(--bio-palette-1); }
 .card[data-color-index="1"] .bio { color: var(--bio-palette-2); }
-.card[data-color-index="2"] .bio { color: var(--bio-palette-3); }
-.card[data-color-index="3"] .bio { color: var(--bio-palette-4); }
-.card[data-color-index="0"] .btn-color { background-color: var(--btn-color-palette-1); }
 .card[data-color-index="1"] .btn-color { background-color: var(--btn-color-palette-2); }
-.card[data-color-index="2"] .btn-color { background-color: var(--btn-color-palette-3); }
-.card[data-color-index="3"] .btn-color { background-color: var(--btn-color-palette-4); }
-
-.card[data-color-index="0"] .btn-follow:not(.following) { background-color: var(--btn-follow-palette-1); }
 .card[data-color-index="1"] .btn-follow:not(.following) { background-color: var(--btn-follow-palette-2); }
-.card[data-color-index="2"] .btn-follow:not(.following) { background-color: var(--btn-follow-palette-3); }
-.card[data-color-index="3"] .btn-follow:not(.following) { background-color: var(--btn-follow-palette-4); }
-.card[data-color-index="0"] .btn-follow.following { background-color: var(--btn-following-palette-1); }
 .card[data-color-index="1"] .btn-follow.following { background-color: var(--btn-following-palette-2); }
-.card[data-color-index="2"] .btn-follow.following { background-color: var(--btn-following-palette-3); }
-.card[data-color-index="3"] .btn-follow.following { background-color: var(--btn-following-palette-4); }
