@@ -2,8 +2,8 @@
     --bg-color: #e6e3db;
     --text-color: #333;
     --card-bg: rgba(255, 255, 255, 0.45);
-    --primary-color: #365e9d;
-    --secondary-color: #6c7ea1;
+    --primary-color: #6c7ea1;
+    --secondary-color: #365e9d;
     --success-color: #28a745;
     --card-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
     --transition-speed: 0.3s;
@@ -397,6 +397,14 @@ body>* {
 .card[data-color-index="0"] .skills h4 {
     color: var(--text-palette-1);
 }
+.card[data-color-index="0"] .avatar { border-color: var(--avatar-border-1); }
+.card[data-color-index="0"] .role { color: var(--role-palette-1); }
+.card[data-color-index="0"] .stat-value { color: var(--stat-value-1); }
+.card[data-color-index="0"] .stat-label { color: var(--stat-label-1); }
+.card[data-color-index="0"] .bio { color: var(--bio-palette-1); }
+.card[data-color-index="0"] .btn-color { background-color: var(--btn-color-palette-1); }
+.card[data-color-index="0"] .btn-follow:not(.following) { background-color: var(--btn-follow-palette-1); }
+.card[data-color-index="0"] .btn-follow.following { background-color: var(--btn-following-palette-1); }
 
 .card[data-color-index="1"] {
     background-color: var(--card-palette-2);
